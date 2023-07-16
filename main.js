@@ -61,4 +61,19 @@ for( let i = 0 ; i<teamMember.length; i++){
 
 }
 
+/*MILESTONE 2:
+Stampare le stesse informazioni su DOM sottoforma di stringhe*/
 
+const teamContainer = document.getElementById("team-container")
+
+for(let i =0; i<teamMember.length; i++){
+    const member = teamMember[i];
+
+    const memberInfo = document.createElement("div");
+    
+    memberInfo.innerHTML = `<div> Nome: ${member.nome}</div> 
+    <p> ruolo: ${member.ruolo}</p>
+    <p> foto: ${member.foto}</p>`;
+}
+
+teamContainer.append(memberInfo); //perche non sta funzionando anche se ho dichiarato member info ?
